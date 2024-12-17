@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <link rel="stylesheet" href="./static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+<body class="background_brown_light">
+    <form action="{{url_for('flight_treatment')}}" method="POST" enctype="multipart/form-data">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center title purple">
+                        Plane delay prediction
+                    </h1>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-9">
+                    <div class="row justify-content-around">
+                        <div class="col-md-3">
+                            <p class="text-center list_choice">
+                                Please choose the month of your flight
+                            </p>
+                        </div>
+                        <div class="col">
+                            <div class="row justify-content-around">
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Janvier" class="radio_1" name="month" />
+                                    Janvier
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Fevrier" class="radio_1" name="month" />
+                                    Fevrier
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Mars" class="radio_1" name="month" />
+                                    Mars
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Avril" class="radio_1" name="month" />
+                                    Avril
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Mai" class="radio_1" name="month" />
+                                    Mai
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Juin" class="radio_1" name="month" />
+                                    Juin
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Juillet" class="radio_1" name="month" />
+                                    Juillet
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Aout" class="radio_1" name="month" />
+                                    Aout
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Septembre" class="radio_1" name="month" />
+                                    Septembre
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Octobre" class="radio_1" name="month" />
+                                    Octobre
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Novembre" class="radio_1" name="month" />
+                                    Novembre
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Decembre" class="radio_1" name="month" />
+                                    Decembre
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr></hr>
+                    <div class="row justify-content-around div2">
+                        <div class="col-md-3">
+                            <p class="text-center list_choice">
+                                Please choose the day number
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row justify-content-around">
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="1" class="radio_2" name="month_day" />
+                                    1
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="2" class="radio_2" name="month_day" />
+                                    2
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="3" class="radio_2" name="month_day" />
+                                    3
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="4" class="radio_2" name="month_day" />
+                                    4
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="5" class="radio_2" name="month_day" />
+                                    5
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="6" class="radio_2" name="month_day" />
+                                    6
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="7" class="radio_2" name="month_day" />
+                                    7
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="8" class="radio_2" name="month_day" />
+                                    8
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="9" class="radio_2" name="month_day" />
+                                    9
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="10" class="radio_2" name="month_day" />
+                                    10
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="11" class="radio_2" name="month_day" />
+                                    11
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="12" class="radio_2" name="month_day" />
+                                    12
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="13" class="radio_2" name="month_day" />
+                                    13
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="14" class="radio_2" name="month_day" />
+                                    14
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="15" class="radio_2" name="month_day" />
+                                    15
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="16" class="radio_2" name="month_day" />
+                                    16
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="17" class="radio_2" name="month_day" />
+                                    17
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="18" class="radio_2" name="month_day" />
+                                    18
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="19" class="radio_2" name="month_day" />
+                                    19
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="20" class="radio_2" name="month_day" />
+                                    20
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="21" class="radio_2" name="month_day" />
+                                    21
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="22" class="radio_2" name="month_day" />
+                                    22
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="23" class="radio_2" name="month_day" />
+                                    23
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="24" class="radio_2" name="month_day" />
+                                    24
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="25" class="radio_2" name="month_day" />
+                                    25
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="26" class="radio_2" name="month_day" />
+                                    26
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="27" class="radio_2" name="month_day" />
+                                    27
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="28" class="radio_2" name="month_day" />
+                                    28
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="29" class="radio_2" name="month_day" />
+                                    29
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="30" class="radio_2" name="month_day" />
+                                    30
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="31" class="radio_2" name="month_day" />
+                                    31
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr></hr>
+                </div>
+                <div class="col-3">
+                    <img src="/static/globe_terrestre_BACKGROUND.jpg" alt="Globe Terrestre" width=100% height=100% title="Globe Terrestre"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <div class="row justify-content-around">
+                        <div class="col-md-3">
+                            <p class="text-center list_choice">
+                                Please choose the day
+                            </p>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row justify-content-around">
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Lundi" class="radio_1" name="day" />
+                                    Lundi
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Mardi" class="radio_1" name="day" />
+                                    Mardi
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Mercredi" class="radio_1" name="day" />
+                                    Mercredi
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Jeudi" class="radio_1" name="day" />
+                                    Jeudi
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Vendredi" class="radio_1" name="day" />
+                                    Vendredi
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Samedi" class="radio_1" name="day" />
+                                    Samedi
+                                </div>
+                                <div class="col-md-3 radio_text">
+                                    <input type="radio" value="Dimanche" class="radio_1" name="day" />
+                                    Dimanche
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="row">
+                <div class="col-9">
+                    <div class="row justify-content-between">
+                        <div class="col-md-9">
+                            <p class="text-start list_choice">
+                                Please indicate the distance [kilometers]
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="area_input" name="distance" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr></hr>
+            <div class="row mb-5">
+                <div class="col-md-9">
+                    <div class="row justify-content-around">
+                        <div class="col-md-3">
+                            <p class="text-center list_choice">
+                                Please choose the carrier
+                            </p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row justify-content-around">
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Aeroflot" class="radio_1" name="origin" />
+                                    Aeroflot
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Afrijet" class="radio_1" name="origin" />
+                                    Afrijet
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="AirFrance" class="radio_1" name="origin" />
+                                    AirFrance
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="AirIndia" class="radio_1" name="origin" />
+                                    AirIndia
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="AmericanAirlines" class="radio_1" name="origin" />
+                                    AmericanAirlines
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="BritishAirways" class="radio_1" name="origin" />
+                                    BritishAirways
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="CityJet" class="radio_1" name="origin" />
+                                    CityJet
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="ContinentalAirlines" class="radio_1" name="origin" />
+                                    ContinentalAirlines
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Easyjet" class="radio_1" name="origin" />
+                                    Easyjet
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Emirates" class="radio_1" name="origin" />
+                                    Emirates
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Etihad" class="radio_1" name="origin" />
+                                    Etihad
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="HOP" class="radio_1" name="origin" />
+                                    HOP
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Iberia" class="radio_1" name="origin" />
+                                    Iberia
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Lufthansa" class="radio_1" name="origin" />
+                                    Lufthansa
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Luxair" class="radio_1" name="origin" />
+                                    Luxair
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="MyAir" class="radio_1" name="origin" />
+                                    MyAir
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="StarFlyer" class="radio_1" name="origin" />
+                                    StarFlyer
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Transavia" class="radio_1" name="origin" />
+                                    Transavia
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="UnitedAirlines" class="radio_1" name="origin" />
+                                    UnitedAirlines
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Vueling" class="radio_1" name="origin" />
+                                    Vueling
+                                </div>
+                                <div class="col-md-4 radio_text">
+                                    <input type="radio" value="Wizzair" class="radio_1" name="origin" />
+                                    Wizzair
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr></hr>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3">
+                            <p class="text-center list_choice">
+                                Please choose the origin
+                            </p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row justify-content-around">
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ALO" class="radio_1" name="destination" />
+                                    ALO
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ATL" class="radio_1" name="destination" />
+                                    ATL
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="BJI" class="radio_1" name="destination" />
+                                    BJI
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="BOS" class="radio_1" name="destination" />
+                                    BOS
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="CLT" class="radio_1" name="destination" />
+                                    CLT
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="CMX" class="radio_1" name="destination" />
+                                    CMX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="CVG" class="radio_1" name="destination" />
+                                    CVG
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="DEN" class="radio_1" name="destination" />
+                                    DEN
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="DFW" class="radio_1" name="destination" />
+                                    DFW
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="DTW" class="radio_1" name="destination" />
+                                    DTW
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="EAU" class="radio_1" name="destination" />
+                                    EAU
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ELM" class="radio_1" name="destination" />
+                                    ELM
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="EWN" class="radio_1" name="destination" />
+                                    EWN
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="EWR" class="radio_1" name="destination" />
+                                    EWR
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="HHH" class="radio_1" name="destination" />
+                                    HHH
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="IAD" class="radio_1" name="destination" />
+                                    IAD
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="IAH" class="radio_1" name="destination" />
+                                    IAH
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="INL" class="radio_1" name="destination" />
+                                    INL
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="LAS" class="radio_1" name="destination" />
+                                    LAS
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="LAX" class="radio_1" name="destination" />
+                                    LAX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="LGA" class="radio_1" name="destination" />
+                                    LGA
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="MCO" class="radio_1" name="destination" />
+                                    MCO
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="MSP" class="radio_1" name="destination" />
+                                    MSP
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="MTH" class="radio_1" name="destination" />
+                                    MTH
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ORD" class="radio_1" name="destination" />
+                                    ORD
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PHL" class="radio_1" name="destination" />
+                                    PHL
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PHX" class="radio_1" name="destination" />
+                                    PHX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PLN" class="radio_1" name="destination" />
+                                    PLN
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PMD" class="radio_1" name="destination" />
+                                    PMD
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="RHI" class="radio_1" name="destination" />
+                                    RHI
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ROW" class="radio_1" name="destination" />
+                                    ROW
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SEA" class="radio_1" name="destination" />
+                                    SEA
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SFO" class="radio_1" name="destination" />
+                                    SFO
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SLC" class="radio_1" name="destination" />
+                                    SLC
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SLE" class="radio_1" name="destination" />
+                                    SLE
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SUX" class="radio_1" name="destination" />
+                                    SUX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="YKM" class="radio_1" name="destination" />
+                                    YKM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr></hr>
+                    <div class="row justify-content-around">
+                        <div class="col-md-3">
+                            <p class="text-center list_choice">
+                                Please choose the destination
+                            </p>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row justify-content-around">
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ALO" class="radio_1" name="carrier" />
+                                    ALO
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ATL" class="radio_1" name="carrier" />
+                                    ATL
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="BJI" class="radio_1" name="carrier" />
+                                    BJI
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="BOS" class="radio_1" name="carrier" />
+                                    BOS
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="CLT" class="radio_1" name="carrier" />
+                                    CLT
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="CMX" class="radio_1" name="carrier" />
+                                    CMX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="CVG" class="radio_1" name="carrier" />
+                                    CVG
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="DEN" class="radio_1" name="carrier" />
+                                    DEN
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="DFW" class="radio_1" name="carrier" />
+                                    DFW
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="DTW" class="radio_1" name="carrier" />
+                                    DTW
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="EAU" class="radio_1" name="carrier" />
+                                    EAU
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ELM" class="radio_1" name="carrier" />
+                                    ELM
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="EWN" class="radio_1" name="carrier" />
+                                    EWN
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="EWR" class="radio_1" name="carrier" />
+                                    EWR
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="HHH" class="radio_1" name="carrier" />
+                                    HHH
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="IAD" class="radio_1" name="carrier" />
+                                    IAD
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="IAH" class="radio_1" name="carrier" />
+                                    IAH
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="INL" class="radio_1" name="carrier" />
+                                    INL
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="LAS" class="radio_1" name="carrier" />
+                                    LAS
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="LAX" class="radio_1" name="carrier" />
+                                    LAX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="LGA" class="radio_1" name="carrier" />
+                                    LGA
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="MCO" class="radio_1" name="carrier" />
+                                    MCO
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="MSP" class="radio_1" name="carrier" />
+                                    MSP
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="MTH" class="radio_1" name="carrier" />
+                                    MTH
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ORD" class="radio_1" name="carrier" />
+                                    ORD
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PHL" class="radio_1" name="carrier" />
+                                    PHL
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PHX" class="radio_1" name="carrier" />
+                                    PHX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PLN" class="radio_1" name="carrier" />
+                                    PLN
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="PMD" class="radio_1" name="carrier" />
+                                    PMD
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="RHI" class="radio_1" name="carrier" />
+                                    RHI
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="ROW" class="radio_1" name="carrier" />
+                                    ROW
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SEA" class="radio_1" name="carrier" />
+                                    SEA
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SFO" class="radio_1" name="carrier" />
+                                    SFO
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SLC" class="radio_1" name="carrier" />
+                                    SLC
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SLE" class="radio_1" name="carrier" />
+                                    SLE
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="SUX" class="radio_1" name="carrier" />
+                                    SUX
+                                </div>
+                                <div class="col-md-2 radio_text">
+                                    <input type="radio" value="YKM" class="radio_1" name="carrier" />
+                                    YKM
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <img src="/static/Rocket.jpg" alt="Rocket" width=80% height=80% title="Rocket"/>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <button id="submit_button" name="action" class="button" value="Predict" onclick="this.classList.toggle('button--loading')">
+                        <span class="button__text">
+                            Est-ce que l'avion aura du retard
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
