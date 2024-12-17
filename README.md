@@ -17,7 +17,7 @@ Data can be found on Kaggle website : https://www.kaggle.com/competitions/flight
 
 
 # Results
-<img src="https://github.com/yanntt4/plane_delay_prediction/blob/master/readme_photo/predict_preparation.JPG" alt="Alt Text" width="250" height="150"><img src="https://github.com/yanntt4/plane_delay_prediction/blob/master/readme_photo/pexels-jens-johnsson-14223-66100.jpg" alt="Alt Text" width="250" height="150"><img src="https://github.com/yanntt4/plane_delay_prediction/blob/master/readme_photo/predictt_result.JPG" alt="Alt Text" width="250" height="150">
+<img src="https://github.com/yanntt4/plane_delay_prediction/blob/master/readme_photo/predict_preparation.JPG" alt="Alt Text" width="250" height="150"><img src="https://github.com/yanntt4/plane_delay_prediction/blob/master/readme_photo/pexels-jens-johnsson-14223-66100.jpg" alt="Alt Text" width="250" height="150"><img src="https://github.com/yanntt4/plane_delay_prediction/blob/master/readme_photo/predict_result.JPG" alt="Alt Text" width="250" height="150">
 
 
 # Usage
