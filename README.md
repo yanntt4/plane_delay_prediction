@@ -22,7 +22,7 @@ Data can be found on Kaggle website : https://www.kaggle.com/competitions/flight
 
 # Usage
 Application can be used for two main usages :
-- Analyse data to create machine learning/deep learning model to estimate insurance subscription probability. 4 algorithms can be used to create model : Random Forest, Gradient Boosting, Neural Network, Extrem Gradient Boosting
+- Analyse data to create machine learning/deep learning model to estimate flight delay probability. 4 algorithms can be used to create model : Random Forest, Gradient Boosting, Neural Network, Extrem Gradient Boosting (model creation program has been improved, please check new versions in other hithub folders)
 - Allow user to make prediction from a webpage
 
 
