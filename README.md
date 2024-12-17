@@ -11,9 +11,9 @@
 ![Scikit-learn 1.5.1](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
 # Description
-Estimate probability, for a mushroom, to be poisonous
+Estimate probability, for a plane, to be delayed
 
-Data can be found on Kaggle website : https://www.kaggle.com/competitions/playground-series-s4e8/overview
+Data can be found on Kaggle website : https://www.kaggle.com/competitions/flight-delay-prediction
 
 
 # Results
