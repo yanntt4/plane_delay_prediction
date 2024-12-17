@@ -5,6 +5,13 @@ Created on Fri Nov 17 13:12:32 2023
 @author: ythiriet
 """
 
+# Clearing all variables
+try:
+    from IPython import get_ipython
+    get_ipython().magic('reset -sf')
+except:
+    pass
+
 
 # Global importation
 import math
@@ -980,10 +987,6 @@ class Data_Modelling_XGBoosting(Data_Modelling):
 Global_Parameters = Parameters()
 
 if Global_Parameters.CLEAR_MODE:
-
-    # Removing data
-    from IPython import get_ipython
-    get_ipython().magic('reset -sf')
 
     # Closing all figures
     plot.close("all")
